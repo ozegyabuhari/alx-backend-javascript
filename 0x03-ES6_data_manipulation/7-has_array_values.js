@@ -1,9 +1,10 @@
-/* eslint-disable array-callback-return */
-export default function hasValuesFromArray(set, array) {
-  for (let i = 0; i < array.length; i++) {
-    if (!set.has(array[i])) {
+const hasValuesFromArray = (set, array) => {
+  for (const item of array) {
+    if (!set.has(item)) {
       return false;
     }
   }
   return true;
 };
+
+export default hasValuesFromArray;
