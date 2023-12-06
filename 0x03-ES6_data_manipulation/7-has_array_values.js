@@ -1,10 +1,8 @@
-export default function hasValuesFromArray(set, list) {
-  let element = true;
-  list.map((x) => {
-    if (!set.has(x)) {
-      element = false;
+function hasValuesFromArray(set, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (!set.has(array[i])) {
+      return false;
     }
-  });
-
-  return element;
+  }
+  return true;
 }
